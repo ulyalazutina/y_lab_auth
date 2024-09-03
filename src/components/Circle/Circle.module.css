@@ -1,0 +1,70 @@
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+@keyframes circle-pink {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    30% {
+        left: 45%;
+        top: 35%;
+    }
+
+    60% {
+        left: 85%;
+        top: 9%;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes circle-blue {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+
+    30% {
+        bottom: 33%;
+        right: 38%;
+    }
+
+    60% {
+        bottom: 21%;
+        right: 68%;
+
+    }
+
+    100% {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.circlePink {
+    box-shadow: inset 10px 0 0.5em 0 #ff14bd, 0 0 0.5em 0 #ff14bd;
+    background: linear-gradient(270deg, transparent, #ff14bd);
+    animation: circle-pink 30s linear 0s infinite normal none;
+}
+
+.circleBlue {
+    box-shadow: inset 10px 0 0.5em 0 #2196f3, 0 0 0.5em 0 #2196f3;
+    background: linear-gradient(270deg, transparent, #2196f3);
+    animation: circle-blue 30s linear 0s infinite normal none;
+}
+
+@media (max-width: 500px) {
+    .circle {
+        width: 80px;
+        height: 80px;
+    }
+}
