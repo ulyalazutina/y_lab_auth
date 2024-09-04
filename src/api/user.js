@@ -1,16 +1,21 @@
 /* eslint-disable no-unreachable */
-const API_URL = 'http://api-url/users';
+const API_URL = 'http://localhost:3000/login';
 
 export const authUser = async({email, password}) => {
     try {
-        await fetch(API_URL, {
+        return await fetch(API_URL, {
             method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 email,
                 password
             }),
         })
-        .then((res) => {return res.json()})
+        .then((response) => {
+            return response.json();
+        })
         .catch((error) => {
             throw new Error(`Ошибка: ${error.message}`);
         });
