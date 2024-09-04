@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/y_lab_auth/static/css/main.b6d376a8.css",
-    "main.js": "/y_lab_auth/static/js/main.a7249121.js",
+    "main.js": "/y_lab_auth/static/js/main.3b832a39.js",
     "static/js/453.eefc47c2.chunk.js": "/y_lab_auth/static/js/453.eefc47c2.chunk.js",
     "index.html": "/y_lab_auth/index.html",
     "main.b6d376a8.css.map": "/y_lab_auth/static/css/main.b6d376a8.css.map",
-    "main.a7249121.js.map": "/y_lab_auth/static/js/main.a7249121.js.map",
+    "main.3b832a39.js.map": "/y_lab_auth/static/js/main.3b832a39.js.map",
     "453.eefc47c2.chunk.js.map": "/y_lab_auth/static/js/453.eefc47c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6d376a8.css",
-    "static/js/main.a7249121.js"
+    "static/js/main.3b832a39.js"
   ]
 }
