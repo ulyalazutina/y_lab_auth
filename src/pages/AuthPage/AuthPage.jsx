@@ -7,10 +7,12 @@ import Button from '../../components/Button/Button';
 import { authUser } from '../../api/user';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../hooks/useUser';
+import { useState } from 'react';
 
 export default function AuthPage() {
     let navigate = useNavigate();
     const { loginUser } = useUser();
+    const [error, setError] = useState();
 
 
     const handleSubmitForm = (e) => {
@@ -23,9 +25,10 @@ export default function AuthPage() {
         })
             .then((result) => {
                 loginUser(result);
+                navigate('/');
             })
-            .then( ()=> {
-                navigate('/')
+            .catch((e) => {
+                setError(e.message);
             })
     }
 
@@ -39,6 +42,7 @@ export default function AuthPage() {
                     <Input type={'password'} name={'password'} id={'password'} placeholder={'test'} required={true}>Пароль</Input>
                     <Button type={'submit'}>Войти</Button>
                 </form>
+                {error && <p className={styles.errorMsq}>{error}</p>}
             </div>
             <Circle color={'blue'} />
         </Wrapper>

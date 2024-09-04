@@ -3,7 +3,8 @@ const API_URL = 'http://localhost:3000/login';
 
 export const authUser = async({email, password}) => {
     try {
-        return await fetch(API_URL, {
+
+        const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -12,14 +13,17 @@ export const authUser = async({email, password}) => {
                 email,
                 password
             }),
-        })
-        .then((response) => {
-            return response.json();
-        })
-        .catch((error) => {
-            throw new Error(`Ошибка: ${error.message}`);
         });
+        
+        if (response.status === 400) {
+            throw new Error("Пользователь не найден");
+        }
+
+        if (response.status === 200) {
+            return response.json();
+        }
+
     } catch (error) {
-        throw new Error("Ошибка соединения с сервером");
+        throw new Error(error.message);
     }
 }
