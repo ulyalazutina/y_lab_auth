@@ -29,7 +29,6 @@ export default function AuthPage() {
                 setError(e.message);
             })
     }
-
     return (
         <Wrapper>
             <Circle color={'pink'} />

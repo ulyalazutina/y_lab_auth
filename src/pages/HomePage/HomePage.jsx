@@ -9,7 +9,7 @@ export default function HomePage() {
     return (
         <Wrapper>
             <div className={styles.box}>
-            <Title>Добро пожаловать, {Object.keys(userData).length === 0 ? <Link to={'/y_lab_auth/auth'}>Авторизоваться</Link> : userData.user.email}</Title>
+            <Title>Добро пожаловать, {Object.keys(userData).length === 0 ? <Link className={styles.link} to={'/y_lab_auth/auth'}>Авторизоваться</Link> : userData.user.email}</Title>
             </div>
         </Wrapper>
     );

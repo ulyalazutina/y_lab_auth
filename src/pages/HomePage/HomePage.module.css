@@ -11,3 +11,17 @@
     z-index: 1;
     border-radius: 20px;
 }
+
+.link {
+    color: blueviolet;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.link:hover {
+    color: rgb(173, 86, 255);
+}
+
+.link:active {
+    color: rgb(88, 0, 170);
+}

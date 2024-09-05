@@ -6,11 +6,13 @@
     font-size: 16px;
     border-radius: 3px;
     cursor: pointer;
+    background-color: #fff;
     transition: background .3s;
+    color: rgb(55, 54, 54);
 }
 
 .btn:hover {
-    background: rgba(108, 104, 104);
+    background: rgb(151, 148, 148);
 }
 
 .btn:active {
