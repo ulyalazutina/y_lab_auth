@@ -1,13 +1,14 @@
 /* eslint-disable no-unreachable */
-const API_URL = 'http://localhost:3000/login';
+const API_URL = 'https://back-auth-jtou.onrender.com/login';
 
 export const authUser = async({email, password}) => {
     try {
 
         const response = await fetch(API_URL, {
+            mode: 'cors',
             method: 'POST',
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 email,

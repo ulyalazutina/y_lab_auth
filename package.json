@@ -2,6 +2,11 @@
   "name": "y_lab_auth",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ulyalazutina.github.io/y_lab_auth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulyalazutina/y_lab_auth.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,11 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-server": "json-server-auth db.json",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.17.4",
-    "json-server-auth": "^2.1.0"
+    "gh-pages": "^6.1.1"
   }
 }

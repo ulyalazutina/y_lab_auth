@@ -4,8 +4,8 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import AuthPage from './pages/AuthPage/AuthPage';
   
 const AppRoutes = {
-  HOME: "/",
-  SIGNIN: "/auth",
+  HOME: "/y_lab_auth",
+  SIGNIN: "/y_lab_auth/auth",
   NOT_FOUND: "*",
 };
 
@@ -16,7 +16,6 @@ function App() {
       <Route path={AppRoutes.SIGNIN} element={<AuthPage />} />
       <Route path={AppRoutes.NOT_FOUND} element={<NotFoundPage />} />
   </Routes>
-
   );
 }
 

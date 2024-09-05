@@ -14,10 +14,8 @@ export default function AuthPage() {
     const { loginUser } = useUser();
     const [error, setError] = useState();
 
-
     const handleSubmitForm = (e) => {
         e.preventDefault();
-
         const formData = new FormData(e.target);
         authUser({
             email: formData.get('email'),
@@ -25,7 +23,7 @@ export default function AuthPage() {
         })
             .then((result) => {
                 loginUser(result);
-                navigate('/');
+                navigate('/y_lab_auth');
             })
             .catch((e) => {
                 setError(e.message);

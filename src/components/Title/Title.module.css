@@ -1,7 +1,6 @@
 .title {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 24px;
 }
 
 @media (max-width: 500px) {
